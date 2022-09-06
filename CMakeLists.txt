@@ -323,7 +323,7 @@ if (NOT PYTHON AND NOT MATLAB AND NOT R_LANG AND NOT EMBEDDED)
 
     # Create demo executable (linked to static library)
     add_executable (osqp_demo ${PROJECT_SOURCE_DIR}/examples/osqp_demo.c)
-    target_link_libraries (osqp_demo osqpstatic)
+    target_link_libraries (osqp_demo osqpstatic ${CMAKE_DL_LIBS})
 
 endif (NOT PYTHON AND NOT MATLAB AND NOT R_LANG AND NOT EMBEDDED)
 
